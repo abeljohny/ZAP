@@ -2,10 +2,10 @@
 *&  Include           ZAP
 *&---------------------------------------------------------------------*
 
-TYPE-POOLS: ZAP, ABAP.
+TYPE-POOLS: abap.
 
-INCLUDE ZAP_CLASSES.
-INCLUDE ZAP_FORMS.
+INCLUDE zap_classes.
+INCLUDE zap_forms.
 
 *----------------------------------------------------------------------*
 * DESCRIPTION  : short hand Open SQL SELECT Statement
@@ -16,7 +16,7 @@ INCLUDE ZAP_FORMS.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *              : Operators + (WHERE clause) and : (field specification) can be specified in any order
 *----------------------------------------------------------------------*
-DEFINE _SELECT.
+DEFINE _select.
   PERFORM _zap_select USING &1 &2 &3.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -27,7 +27,7 @@ END-OF-DEFINITION.
 * USAGE        : _deffcat 'fieldname tabname seltext_s'.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _DEFFCAT.
+DEFINE _deffcat.
   PERFORM _zap_deffcat USING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -37,7 +37,7 @@ END-OF-DEFINITION.
 * USAGE        : _addfcat '''BUKRS''    ''BSEG'' ''Company''.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _ADDFCAT.
+DEFINE _addfcat.
   PERFORM _zap_addfcat USING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -48,7 +48,7 @@ END-OF-DEFINITION.
 *              : _getfcat lit_fcat.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _GETFCAT.
+DEFINE _getfcat.
   PERFORM _zap_getfcat CHANGING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -58,7 +58,7 @@ END-OF-DEFINITION.
 * USAGE        : _deflayout 'zebra'.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _DEFLAYOUT.
+DEFINE _deflayout.
   PERFORM _zap_deflayout USING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -68,7 +68,7 @@ END-OF-DEFINITION.
 * USAGE        : _addlayout '''X'''.
 * NOTE         : all tokens must be seperated by space and enclosed in single quotes
 *----------------------------------------------------------------------*
-DEFINE _ADDLAYOUT.
+DEFINE _addlayout.
   PERFORM _zap_addlayout USING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -79,7 +79,7 @@ END-OF-DEFINITION.
 *              : _getlayout lwa_layout.
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _GETLAYOUT.
+DEFINE _getlayout.
   PERFORM _zap_getlayout CHANGING &1.
 END-OF-DEFINITION.
 *----------------------------------------------------------------------*
@@ -90,6 +90,6 @@ END-OF-DEFINITION.
 *              :  where <variable> is a data reference variable of the form returned by _select
 * NOTE         : all tokens must be seperated by space and are case insensitive
 *----------------------------------------------------------------------*
-DEFINE _DISPLAY.
+DEFINE _display.
   PERFORM _zap_display USING &1.
 END-OF-DEFINITION.
