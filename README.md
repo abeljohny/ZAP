@@ -1,6 +1,6 @@
 # ZAP
 
-Tiny DSL in ABAP for rapid report prototyping
+Tiny DSL in ABAP for rapid report prototyping. Featured on https://dotabap.org/explore.html.
 
 ## Installation
 
